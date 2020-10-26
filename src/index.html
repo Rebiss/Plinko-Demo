@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Plinko</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+    }
+
+    canvas {
+      background: rgb(18, 34, 46);
+      ;
+    }
+
+    .app-height {
+      height: 560px;
+    }
+
+    .items-bet-numbers {
+      margin-top: 2px;
+    }
+
+    .items-bet-numbers span {
+      width: 67px;
+    }
+
+    .app-menu-bar {
+      background: #263742;
+    }
+
+    .status-manual {
+      font-weight: 600;
+      font-size: 0.8em;
+      touch-action: manipulation;
+      position: relative;
+      display: inline-flex;
+      -webkit-box-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      align-items: center;
+      line-height: 1.5;
+      color: rgb(183, 191, 214);
+      transition: background 300ms ease 0s, opacity 300ms ease 0s, transform 100ms ease 0s;
+      border-radius: 5px;
+      background: #15222d;
+      padding: calc(0.5em + 2px) 1em;
+    }
+
+    .status-auto {
+      font-weight: 600;
+      font-size: 0.8em;
+      touch-action: manipulation;
+      position: relative;
+      display: inline-flex;
+      -webkit-box-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      align-items: center;
+      line-height: 1.5;
+      color: rgb(183, 191, 214);
+      transition: background 300ms ease 0s, opacity 300ms ease 0s, transform 100ms ease 0s;
+      border-radius: 5px;
+      background: rgb(46, 68, 82);
+      padding: calc(0.5em + 2px) 1em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="jumbotron text-center" style="background: rgb(25, 44, 56);">
+    <p style="color: white">Plinko</p>
+  </div>
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-2 app-height app-menu-bar">
+        <div class="btn-group" style="width: 100%; margin-top: 20px; ">
+          <button id="manual-game" class="btn status-manual" style="width: 50%;font-weight: 600;">Manual</button>
+          <button id="auto-game" class="btn status-auto" style="width: 50%">Auto</button>
+        </div>
+        <button id="add-ball" class="btn btn-block add-size" style="background: #00e403; margin-top: 30px">Bet</button>
+      </div>
+
+
+
+      <div class="col-md-8" style="padding: 0">
+        <div id="app" class="col-md-12 col-sm-12 col-xs-12 app-height" style="padding: 0">
+          <canvas id="gameCanvas"></canvas>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 items-bet-numbers" style="padding: 0">
+          <span class="btn btn-warning"> x10 </span>
+          <span class="btn btn-warning"> x9 </span>
+          <span class="btn btn-warning"> x8 </span>
+          <span class="btn btn-warning"> x7 </span>
+          <span class="btn btn-warning"> x6 </span>
+          <span class="btn btn-warning"> x5 </span>
+          <span class="btn btn-warning"> x6 </span>
+          <span class="btn btn-warning"> x7 </span>
+          <span class="btn btn-warning"> x8 </span>
+          <span class="btn btn-warning"> x9 </span>
+          <span class="btn btn-warning"> x10 </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
